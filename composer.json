@@ -1,0 +1,26 @@
+{
+    "name": "reluem/calendar-extended",
+    "type": "contao-bundle",
+    "authors": [
+        {
+            "name": "Lucas Rech",
+            "email": "lucas.rech@me.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "reluem\\CalendarExtended\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "reluem\\CalendarExtended\\ContaoManager\\Plugin"
+    }
+}
