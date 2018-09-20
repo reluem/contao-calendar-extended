@@ -107,17 +107,16 @@
     (
         'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['signupUrl'],
         'exclude' => true,
+        'search' => true,
         'inputType' => 'text',
         'eval' => array(
+            'mandatory' => true,
             'rgxp' => 'url',
             'decodeEntities' => true,
             'maxlength' => 255,
-            'fieldType' => 'radio',
-            'filesOnly' => true,
-            'tl_class' => 'w50 wizard',
-        ),
-        'wizard' => array(
-            array('tl_content', 'pagePicker'),
+            'dcaPicker' => true,
+            'addWizardClass' => false,
+            'tl_class' => 'w50',
         ),
         'sql' => "varchar(255) NOT NULL default ''",
     );
@@ -138,7 +137,7 @@
         'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['signupStart'],
         'exclude' => true,
         'inputType' => 'text',
-        'eval' => array('rgxp' => 'datim', 'datepicker' => true, 'tl_class' => 'clr w50 wizard'),
+        'eval' => array('mandatory' => true, 'rgxp' => 'datim', 'datepicker' => true, 'tl_class' => 'clr w50 wizard'),
         'sql' => "varchar(10) NOT NULL default ''",
     );
     
@@ -147,6 +146,6 @@
         'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['signupEnd'],
         'exclude' => true,
         'inputType' => 'text',
-        'eval' => array('rgxp' => 'datim', 'datepicker' => true, 'tl_class' => 'w50 wizard'),
+        'eval' => array('mandatory' => true, 'rgxp' => 'datim', 'datepicker' => true, 'tl_class' => 'w50 wizard'),
         'sql' => "varchar(10) NOT NULL default ''",
     );
