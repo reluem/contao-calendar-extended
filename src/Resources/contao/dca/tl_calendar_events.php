@@ -24,7 +24,7 @@
         ->addField(array('location_ID', 'FB_event_URL'),
             'location',
             \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER)
-        ->addField(array('signupUrl', 'signupLabel', 'SignupStart', 'signupEnd'), 'signup_legend',
+        ->addField(array('signupUrl', 'signupLabel', 'signupStart', 'signupEnd'), 'signup_legend',
             \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_APPEND)
         ->addField('subtitle', 'title', \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER)
         ->applyToPalette('default', 'tl_calendar_events');
