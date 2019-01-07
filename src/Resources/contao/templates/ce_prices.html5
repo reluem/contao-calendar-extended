@@ -2,24 +2,49 @@
 
 <?php $this->block('content'); ?>
 
+<?php foreach ($this->prices as $price): ?>
 
-    <div class="uk-grid" uk-grid>
-        <?php foreach ($this->prices as $price): ?>
-            <div class="uk-width-expand@m">
-                <div class="uk-card uk-card-default uk-card-small uk-card-body">
-                    <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $price['price'] ?>€</h3>
-                    <span class="uk-text-uppercase uk-display-block"><?= $price['price_type'] ?></span>
-                    <span class="uk-text-muted uk-display-block"><?= $price['price_desc'] ?></span>
-                    <?php if (time() < $price['price_valid_until']): ?>
-                        <div class="uk-label uk-label-default">bis <?= \Date::parse('d.m.Y',
-                                $price['price_valid_until']); ?></div>
-                    <?php else: ?>
-                        <div class="uk-label uk-label-warning">abgelaufen</div>
-                    <?php endif; ?>
-                </div>
-            </div>
+    <div class="uk-grid uk-grid-small uk-grid-match" uk-grid>
         
-        <?php endforeach; ?>
+        <?php if ($price['price_type']): ?>
+            <div class="uk-width-small uk-flex uk-flex-middle">
+                <h3>
+                    <?= $price['price_type']; ?>
+                </h3>
+            </div>
+        <?php endif; ?>
+        <div class="uk-width-expand">
+            <div class="uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+                <?php $active = null; ?>
+                <?php foreach ($price['price_items'] as $price_item): ?>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                            <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $price_item['price'] ?>€</h3>
+                            <span class="uk-text-uppercase uk-display-block"><?= $price_item['price_type'] ?></span>
+                            <span class="uk-text-muted uk-display-block"><?= $price_item['price_desc'] ?></span>
+                            
+                            <?php if (\Date::parse('d.m.Y', time()) <= \Date::parse('d.m.Y',
+                                    $price_item['price_valid_until'])): ?>
+                                
+                                <?php if (!$active | $active === $price_item['price_valid_until']): ?>
+                                    <div class="uk-label">bis <?= \Date::parse('d.m.Y',
+                                            $price_item['price_valid_until']); ?></div>
+                                    <?php $active = $price_item['price_valid_until']; ?>
+                                <?php else: ?>
+                                    <div class="uk-label uk-label-success">ab <?= \Date::parse('d.m.Y',
+                                            $active); ?></div>
+                                <?php endif; ?>
+                            
+                            <?php else: ?>
+                                <div class="uk-label uk-label-warning">abgelaufen</div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
     </div>
+
+<?php endforeach; ?>
 
 <?php $this->endblock(); ?>

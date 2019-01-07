@@ -41,11 +41,14 @@
     $GLOBALS['TL_LANG']['tl_content']['price'] = [
         'Preis',
     ];
+    $GLOBALS['TL_LANG']['tl_content']['price_items'] = [
+        'Preisstaffelung',
+    ];
     $GLOBALS['TL_LANG']['tl_content']['price_desc'] = [
         'Beschreibung',
     ];
     $GLOBALS['TL_LANG']['tl_content']['price_type'] = [
-        'Preisstufe',
+        'Altersstufe',
     ];
     $GLOBALS['TL_LANG']['tl_content']['price_valid_from'] = [
         'gültig von',
