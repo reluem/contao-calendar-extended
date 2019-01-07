@@ -20,8 +20,7 @@
                     <div>
                         <div class="uk-card uk-card-default uk-card-small uk-card-body">
                             <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $price_item['price'] ?>€</h3>
-                            <span class="uk-text-uppercase uk-display-block"><?= $price_item['price_type'] ?></span>
-                            <span class="uk-text-muted uk-display-block"><?= $price_item['price_desc'] ?></span>
+                            <span class="uk-text-uppercase uk-display-block"><?= $price_item['price_desc'] ?></span>
                             
                             <?php if (\Date::parse('d.m.Y', time()) <= \Date::parse('d.m.Y',
                                     $price_item['price_valid_until'])): ?>
