@@ -1,0 +1,24 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<?php dump($this);?>
+
+    <div class="uk-grid" uk-grid>
+        <?php foreach ($this->prices as $price): ?>
+            <?php dump(time());
+            $active = (time() < $price['price_valid_until']);
+            dump($active); ?>
+            <div class="uk-width-auto@m">
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-card-small">
+                    <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $price['price'] ?></h3>
+                    <span class="uk-text-uppercase uk-display-block"><?= $price['price_type'] ?></span>
+                    <span class="uk-text-muted uk-display-block"><?= $price['desc'] ?></span>
+                    <div class="uk-label"><?= \Date::parse($price['price_valid_until']); ?></div>
+                </div>
+            </div>
+        
+        <?php endforeach; ?>
+    </div>
+
+<?php $this->endblock(); ?>
