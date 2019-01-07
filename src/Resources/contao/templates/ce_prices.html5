@@ -4,13 +4,15 @@
 
 <?php foreach ($this->prices as $price): ?>
 
-    <div class="uk-grid uk-grid-small uk-grid-match" uk-grid>
+    <div class="uk-grid uk-grid-small uk-grid-match uk-margin">
         
         <?php if ($price['price_type']): ?>
             <div class="uk-width-small@s uk-flex uk-flex-middle">
-                <h3>
-                    <?= $price['price_type']; ?>
-                </h3>
+                <div class="uk-tile uk-tile-<?= $this->UIkit_background ?: 'primary'; ?> uk-padding-small">
+                    <h3>
+                        <?= $price['price_type']; ?>
+                    </h3>
+                </div>
             </div>
         <?php endif; ?>
         <div class="uk-width-expand uk-margin">
