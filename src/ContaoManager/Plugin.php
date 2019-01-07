@@ -7,6 +7,7 @@
     use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
     use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
     use Contao\CoreBundle\ContaoCoreBundle;
+    use Contao\CalendarBundle\ContaoCalendarBundle;
     
     /**
      * @see https://github.com/contao/manager-plugin/blob/master/src/Bundle/BundlePluginInterface.php Code in GitHub
@@ -17,7 +18,7 @@
         {
             return [
                 BundleConfig::create(ReluemCalendarExtendedBundle::class)
-                    ->setLoadAfter(['Contao\CalendarBundle\ContaoCalendarBundle'])
+                    ->setLoadAfter([ContaoCalendarBundle::class]),
             ];
         }
     }

@@ -1,5 +1,4 @@
 <?php
-#/system/modules/calendar-extended/dca/tl_calendar_events.php
     
     Controller::loadDataContainer('tl_content');
     

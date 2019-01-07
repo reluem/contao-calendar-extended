@@ -1,6 +1,6 @@
 <?php
     
-    namespace reluem\calendarExtended\classes\modules;
+    namespace Reluem;
     
     class navbarSignup extends \Module
     {
