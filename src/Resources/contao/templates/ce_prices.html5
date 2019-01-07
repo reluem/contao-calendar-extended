@@ -10,7 +10,7 @@
             <div class="uk-width-small@s uk-flex uk-flex-middle">
                 <div class="uk-tile uk-tile-<?= $this->UIkit_background ?: 'primary'; ?> uk-padding-small">
                     <h3>
-                        <?= $price['price_type']; ?>
+                        <span class="uk-text-muted"><?= $price['price_type']; ?></span>
                     </h3>
                 </div>
             </div>

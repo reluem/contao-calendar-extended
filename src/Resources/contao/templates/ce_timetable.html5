@@ -6,7 +6,7 @@
         <?php foreach ($this->timetable as $date): ?>
             <div class="uk-width-expand@m">
                 <div class="uk-grid-small uk-grid uk-flex uk-flex-middle" uk-grid>
-                    <div class="uk-width-1-4 uk-width-auto@s">
+                    <div class="uk-width-1-4 uk-width-small@s">
                         <h4 class="uk-heading-hero">
                             <span class="uk-text-background"><?= \Date::parse('d',
                                     $date['timetable_date']); ?></span>
@@ -14,8 +14,10 @@
                     </div>
                     <div class="uk-width-auto">
                         <h3 class="uk-margin-remove">
-                            <span class="uk-text-background"><?= \Date::parse('F',
-                                    $date['timetable_date']); ?></span>
+                            <div class="uk-text-background"><?= \Date::parse('F',
+                                    $date['timetable_date']); ?></div>
+                            <div class="uk-text-background"><?= \Date::parse('Y',
+                                    $date['timetable_date']); ?></div>
                         </h3>
                         <h5 class="uk-margin-remove uk-text-muted uk-text-uppercase">
                             <span
