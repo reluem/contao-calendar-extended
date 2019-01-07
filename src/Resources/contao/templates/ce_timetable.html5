@@ -17,7 +17,7 @@
                                 $date['timetable_date']); ?></h5>
                     </div>
                 </div>
-                <ul class="uk-margin uk-text-left uk-list uk-list-large">
+                <ul class="uk-margin uk-text-left uk-list uk-list-large uk-list-divider">
                     
                     <?php foreach ($date['timetable_times'] as $item): ?>
                         <li>

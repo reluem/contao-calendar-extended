@@ -77,6 +77,7 @@
                                         'inputType' => 'textarea',
                                         'eval' => [
                                             'style' => 'width:150px',
+                                            'preserveTags' => true,
                                         ],
                                     
                                     ],
