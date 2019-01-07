@@ -7,14 +7,14 @@
     <div class="uk-grid uk-grid-small uk-grid-match" uk-grid>
         
         <?php if ($price['price_type']): ?>
-            <div class="uk-width-small uk-flex uk-flex-middle">
+            <div class="uk-width-small@s uk-flex uk-flex-middle">
                 <h3>
                     <?= $price['price_type']; ?>
                 </h3>
             </div>
         <?php endif; ?>
-        <div class="uk-width-expand">
-            <div class="uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+        <div class="uk-width-expand uk-margin">
+            <div class="uk-grid uk-grid-small uk-grid-match uk-child-width-expand@s" uk-grid>
                 <?php $active = null; ?>
                 <?php foreach ($price['price_items'] as $price_item): ?>
                     <div>
