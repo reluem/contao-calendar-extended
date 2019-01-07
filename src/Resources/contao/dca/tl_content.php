@@ -7,7 +7,7 @@
     
     $GLOBALS['TL_DCA']['tl_content']['palettes']['timetable'] = 'name,type,headline;{timetable_legend},timetable;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
     
-    $GLOBALS['TL_DCA']['tl_content']['palettes']['prices'] = 'name,type,headline;{prices_legend},prices;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+    $GLOBALS['TL_DCA']['tl_content']['palettes']['prices'] = 'name,type;{prices_legend},prices;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
     
     
     /**

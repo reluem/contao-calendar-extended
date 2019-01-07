@@ -8,7 +8,7 @@
         
         <?php if ($price['price_type']): ?>
             <div class="uk-width-small@s uk-flex uk-flex-middle">
-                <div class="uk-tile uk-tile-<?= $this->UIkit_background ?: 'primary'; ?> uk-padding-small">
+                <div class="uk-tile uk-padding-small">
                     <h3>
                         <span class="uk-text-muted"><?= $price['price_type']; ?></span>
                     </h3>
