@@ -11,7 +11,7 @@
                                 $date['timetable_date']); ?></h4>
                     </div>
                     <div>
-                        <h4 class="uk-text-background uk-margin-remove"><?= \Date::parse('M',
+                        <h4 class="uk-text-background uk-margin-remove"><?= \Date::parse('F',
                                 $date['timetable_date']); ?></h4>
                         <h5 class="uk-margin-remove uk-text-muted uk-text-uppercase"><?= \Date::parse('l',
                                 $date['timetable_date']); ?></h5>
@@ -22,12 +22,12 @@
                     <?php foreach ($date['timetable_times'] as $item): ?>
                         <li>
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-small@s uk-text-break">
                                     <span class="uk-display-block uk-text-muted"><?= date('H:i',
-                                            $item['timetable_start']) ?></span>
-                                    <?php if ($item['timetable_stop']): ?>
-                                        <span class="uk-display-block uk-text-muted"> – <br><?= date('H:i',
-                                                $item['timetable_stop']) ?></span>
+                                            $item['timetable_start']) ?>
+                                        <?php if ($item['timetable_end']): ?>
+                                        – <?= \Date::parse('H:i',
+                                            $item['timetable_end']) ?></span>
                                     <?php endif; ?>
                                 </div>
 
