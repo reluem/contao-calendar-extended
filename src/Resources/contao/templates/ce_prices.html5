@@ -1,0 +1,25 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+
+    <div class="uk-grid" uk-grid>
+        <?php foreach ($this->prices as $price): ?>
+            <div class="uk-width-expand@m">
+                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                    <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $price['price'] ?>€</h3>
+                    <span class="uk-text-uppercase uk-display-block"><?= $price['price_type'] ?></span>
+                    <span class="uk-text-muted uk-display-block"><?= $price['price_desc'] ?></span>
+                    <?php if (time() < $price['price_valid_until']): ?>
+                        <div class="uk-label uk-label-default">bis <?= \Date::parse('d.m.Y',
+                                $price['price_valid_until']); ?></div>
+                    <?php else: ?>
+                        <div class="uk-label uk-label-warning">abgelaufen</div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        
+        <?php endforeach; ?>
+    </div>
+
+<?php $this->endblock(); ?>
