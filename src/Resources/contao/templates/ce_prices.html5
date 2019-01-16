@@ -44,7 +44,6 @@
                                 <?php endif; ?>
                         </div>
                     </div>
-                    <?php dump($active); ?>
                 <?php endforeach; ?>
             </div>
         </div>
