@@ -24,25 +24,27 @@
                             <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $price_item['price'] ?>€</h3>
                             <span class="uk-text-uppercase uk-display-block"><?= $price_item['price_desc'] ?></span>
                             
-                            <?php if ($price_item['price_valid_until']): ?>
-                                <?php if (\Date::parse('d.m.Y', time()) <= \Date::parse('d.m.Y',
-                                        $price_item['price_valid_until'])): ?>
+                            <?php // if price validity given
+                                if ($price_item['price_valid_until']): ?>
+                                    <?php //  if today <= price validity
+                                    if (strtotime('today') <= $price_item['price_valid_until']): ?>
+                                        <?php // if validity closest -> active offer
+                                        if (!$active | $active === $price_item['price_valid_until']): ?>
+                                            <div class="uk-label">bis <?= \Date::parse('d.m.Y',
+                                                    $price_item['price_valid_until']); ?></div>
+                                            <?php $active = $price_item['price_valid_until']; ?>
+                                        <?php else: ?>
+                                            <div class="uk-label uk-label-success">ab <?= \Date::parse('d.m.Y',
+                                                    $active); ?></div>
+                                        <?php endif; ?>
                                     
-                                    <?php if (!$active | $active === $price_item['price_valid_until']): ?>
-                                        <div class="uk-label">bis <?= \Date::parse('d.m.Y',
-                                                $price_item['price_valid_until']); ?></div>
-                                        <?php $active = $price_item['price_valid_until']; ?>
                                     <?php else: ?>
-                                        <div class="uk-label uk-label-success">ab <?= \Date::parse('d.m.Y',
-                                                $active); ?></div>
+                                        <div class="uk-label uk-label-warning">abgelaufen</div>
                                     <?php endif; ?>
-                                
-                                <?php else: ?>
-                                    <div class="uk-label uk-label-warning">abgelaufen</div>
                                 <?php endif; ?>
-                            <?php endif; ?>
                         </div>
                     </div>
+                    <?php dump($active); ?>
                 <?php endforeach; ?>
             </div>
         </div>
