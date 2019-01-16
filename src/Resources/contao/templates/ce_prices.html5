@@ -32,12 +32,11 @@
                                         if (!$active | $active === $price_item['price_valid_until']): ?>
                                             <div class="uk-label">bis <?= \Date::parse('d.m.Y',
                                                     $price_item['price_valid_until']); ?></div>
-                                            <?php $active = $price_item['price_valid_until']; ?>
                                         <?php else: ?>
-                                            <div class="uk-label uk-label-success">ab <?= \Date::parse('d.m.Y',
-                                                    $active); ?></div>
+                                            <div class="uk-label uk-label-success">
+                                                ab <?= \Date::parse('d.m.Y', $active); ?></div>
                                         <?php endif; ?>
-                                    
+                                        <?php $active = $price_item['price_valid_until']; ?>
                                     <?php else: ?>
                                         <div class="uk-label uk-label-warning">abgelaufen</div>
                                     <?php endif; ?>
@@ -48,7 +47,7 @@
             </div>
         </div>
     </div>
-
+    <hr/>
 <?php endforeach; ?>
 
 <?php $this->endblock(); ?>
