@@ -8,7 +8,7 @@
             <li class="uk-margin-medium-bottom uk-margin-medium-top uk-padding-small">
                 
                 <?php if ($category['price_type']): ?>
-                    <h3 class="uk-margin-remove-adjacent uk-light">
+                    <h3 class="uk-margin-remove-adjacent">
                         <?= $category['price_type']; ?>
                     </h3>
                 <?php endif; ?>
