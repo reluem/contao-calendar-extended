@@ -9,7 +9,7 @@
                 
                 <?php if ($category['price_type']): ?>
                     <h3 class="uk-margin-remove-adjacent">
-                        <?= $category['price_type']; ?>
+                        <span class="uk-text-muted"><?= $category['price_type']; ?></span>
                     </h3>
                 <?php endif; ?>
                 <div class="uk-grid uk-grid-match uk-child-width-expand@s" uk-grid>
