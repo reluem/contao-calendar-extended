@@ -22,21 +22,13 @@
                                 
                                 <?php // if price validity given
                                     if ($item['price_valid_until']): ?>
-                                        <?php //  if today <= price validity
-                                        if (strtotime('today') <= $item['price_valid_until']): ?>
-                                            <?php // if validity closest -> active offer
-                                            if (!$active | $active === $item['price_valid_until']): ?>
-                                                <div class="uk-label" title="<?= \Date::parse('d.m.Y H:i',
-                                                    $item['price_valid_until']); ?>">
-                                                    bis <?= \Date::parse('d.m.Y',
-                                                        $item['price_valid_until']); ?></div>
-                                            <?php else: ?>
-                                                <div class="uk-label uk-label-success"
-                                                     title="<?= \Date::parse('d.m.Y H:i',
-                                                         $item['price_valid_until']); ?>">
-                                                    bis <?= \Date::parse('d.m.Y',
-                                                        $item['price_valid_until']); ?></div>
-                                            <?php endif; ?>
+                                        <?php //  if now <= price validity
+                                        if (\Date::parse('U') <= $item['price_valid_until']): ?>
+                                            <div class="uk-label <?php echo (!$active | $active === $item['price_valid_until']) ? '' : 'uk-label-success'; ?>"
+                                                 title="<?= \Date::parse('d.m.Y H:i',
+                                                     $item['price_valid_until']); ?>">
+                                                bis <?= \Date::parse('d.m.Y',
+                                                    $item['price_valid_until']); ?></div>
                                             <?php $active = $item['price_valid_until']; ?>
                                         <?php else: ?>
                                             <div class="uk-label uk-label-warning"
