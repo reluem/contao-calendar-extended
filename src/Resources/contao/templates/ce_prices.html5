@@ -3,16 +3,16 @@
 <?php $this->block('content'); ?>
 
     <ul class="uk-list uk-list-large uk-list-divider">
-        <?php foreach ($this->prices as $price): ?>
+        <?php foreach ($this->prices as $category): ?>
 
             <li class="uk-margin-medium-bottom uk-margin-medium-top">
                 <div class="uk-grid uk-grid-small uk-grid-match uk-margin-large">
                     
-                    <?php if ($price['price_type']): ?>
+                    <?php if ($category['price_type']): ?>
                         <div class="uk-width-small@s uk-flex uk-flex-middle">
                             <div class="uk-tile uk-padding-small">
                                 <h3>
-                                    <span class="uk-text-muted"><?= $price['price_type']; ?></span>
+                                    <span class="uk-text-muted"><?= $category['price_type']; ?></span>
                                 </h3>
                             </div>
                         </div>
@@ -20,27 +20,35 @@
                     <div class="uk-width-expand uk-margin">
                         <div class="uk-grid uk-grid-small uk-grid-match uk-child-width-expand@s" uk-grid>
                             <?php $active = null; ?>
-                            <?php foreach ($price['price_items'] as $price_item): ?>
+                            <?php foreach ($category['price_items'] as $price_item => $item): ?>
                                 <div>
                                     <div class="uk-card uk-card-default uk-card-small uk-card-body">
-                                        <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $price_item['price'] ?>€</h3>
-                                        <span class="uk-text-uppercase uk-display-block"><?= $price_item['price_desc'] ?></span>
+                                        <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $item['price'] ?>€</h3>
+                                        <span class="uk-text-uppercase uk-display-block"><?= $item['price_desc'] ?></span>
                                         
                                         <?php // if price validity given
-                                            if ($price_item['price_valid_until']): ?>
+                                            if ($item['price_valid_until']): ?>
                                                 <?php //  if today <= price validity
-                                                if (strtotime('today') <= $price_item['price_valid_until']): ?>
+                                                if (strtotime('today') <= $item['price_valid_until']): ?>
                                                     <?php // if validity closest -> active offer
-                                                    if (!$active | $active === $price_item['price_valid_until']): ?>
-                                                        <div class="uk-label">bis <?= \Date::parse('d.m.Y',
-                                                                $price_item['price_valid_until']); ?></div>
+                                                    if (!$active | $active === $item['price_valid_until']): ?>
+                                                        <div class="uk-label" title="<?= \Date::parse('d.m.Y H:i',
+                                                            $item['price_valid_until']); ?>">
+                                                            bis <?= \Date::parse('d.m.Y',
+                                                                $item['price_valid_until']); ?></div>
                                                     <?php else: ?>
-                                                        <div class="uk-label uk-label-success">
-                                                            ab <?= \Date::parse('d.m.Y', $active); ?></div>
+                                                        <div class="uk-label uk-label-success"
+                                                             title="<?= \Date::parse('d.m.Y H:i',
+                                                                 $item['price_valid_until']); ?>">
+                                                            bis <?= \Date::parse('d.m.Y',
+                                                                $item['price_valid_until']); ?></div>
                                                     <?php endif; ?>
-                                                    <?php $active = $price_item['price_valid_until']; ?>
+                                                    <?php $active = $item['price_valid_until']; ?>
                                                 <?php else: ?>
-                                                    <div class="uk-label uk-label-warning">abgelaufen</div>
+                                                    <div class="uk-label uk-label-warning"
+                                                         title="<?= \Date::parse('d.m.Y H:i',
+                                                             $item['price_valid_until']); ?>">abgelaufen
+                                                    </div>
                                                 <?php endif; ?>
                                             <?php endif; ?>
                                     </div>

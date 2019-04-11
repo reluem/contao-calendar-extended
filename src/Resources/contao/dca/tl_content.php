@@ -155,7 +155,7 @@
                                             'exclude' => true,
                                             'inputType' => 'text',
                                             'eval' => [
-                                                'rgxp' => 'date',
+                                                'rgxp' => 'datim',
                                                 'datepicker' => true,
                                                 'tl_class' => 'w50 wizard',
                                                 'style' => 'width: 70%',
