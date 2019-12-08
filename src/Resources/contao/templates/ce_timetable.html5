@@ -7,7 +7,7 @@
             <div class="uk-width-expand@m">
                 <div class="uk-grid-small uk-grid uk-flex uk-flex-middle" uk-grid>
                     <div class="uk-width-1-4 uk-width-small@s">
-                        <h4 class="uk-heading-hero">
+                        <h4 class="uk-heading-large">
                             <span class="uk-text-background"><?= \Date::parse('d',
                                     $date['timetable_date']); ?></span>
                         </h4>
