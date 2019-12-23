@@ -20,7 +20,7 @@
             \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_APPEND)
         ->addField('text', 'text_legend',
             \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_APPEND)
-        ->addField(array('location_ID', 'FB_event_URL'),
+        ->addField(array('coordinates', 'FB_event_URL'),
             'location',
             \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER)
         ->addField(array('signupUrl', 'signupLabel', 'signupStart', 'signupEnd'), 'signup_legend',
@@ -37,15 +37,16 @@
     $GLOBALS['TL_DCA']['tl_calendar_events']['palettes']['__selector__'][] = 'addVideo';
     
     
-    $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['location_ID'] = array
-    (
-        'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['location_ID'],
-        'exclude' => true,
-        'search' => true,
-        'inputType' => 'text',
-        'eval' => array('maxlength' => 255, 'tl_class' => 'w50'),
-        'sql' => "varchar(255) NOT NULL default ''",
-    );
+   
+    $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['coordinates'] = [
+        'label'     => ['Koordinaten', 'Geben Sie die Koordinaten ein'],
+        'inputType' => 'leaflet_geocode',
+        'eval'      => [
+            'tl_class' => 'w50',
+        ],
+        'sql' => 'varchar(255) NOT NULL default \'\''
+    ];
+    
     $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['FB_event_URL'] = array
     (
         'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['FB_event_URL'],
