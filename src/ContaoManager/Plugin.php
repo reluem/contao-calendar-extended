@@ -1,23 +1,20 @@
 <?php
     
-    namespace reluem\CalendarExtended\ContaoManager;
+    namespace reluem\ContaoCalendarExtendedBundle\ContaoManager;
     
-    use reluem\CalendarExtended\ReluemCalendarExtendedBundle;
-    use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+    
     use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
+    use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
     use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-    use Contao\CoreBundle\ContaoCoreBundle;
     use Contao\CalendarBundle\ContaoCalendarBundle;
+    use reluem\ContaoCalendarExtendedBundle\ContaoCalendarExtendedBundle;
     
-    /**
-     * @see https://github.com/contao/manager-plugin/blob/master/src/Bundle/BundlePluginInterface.php Code in GitHub
-     */
     class Plugin implements BundlePluginInterface
     {
-        public function getBundles(ParserInterface $parser)
+        public function getBundles(ParserInterface $parser): array
         {
             return [
-                BundleConfig::create(ReluemCalendarExtendedBundle::class)
+                BundleConfig::create(ContaoCalendarExtendedBundle::class)
                     ->setLoadAfter([ContaoCalendarBundle::class]),
             ];
         }

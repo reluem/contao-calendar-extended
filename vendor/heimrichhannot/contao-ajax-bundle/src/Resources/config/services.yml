@@ -1,0 +1,13 @@
+services:
+  huh.ajax.hooks:
+    class: HeimrichHannot\AjaxBundle\Backend\Hooks
+    public: true
+  huh.ajax:
+    class: HeimrichHannot\AjaxBundle\Manager\AjaxManager
+    public: true
+  huh.ajax.token:
+    class: HeimrichHannot\AjaxBundle\Manager\AjaxTokenManager
+    public: true
+  huh.ajax.action:
+    class: HeimrichHannot\AjaxBundle\Manager\AjaxActionManager
+    public: true
