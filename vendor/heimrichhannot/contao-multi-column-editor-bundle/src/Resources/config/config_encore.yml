@@ -1,8 +1,0 @@
-huh:
-  encore:
-    entries:
-      - { name: contao-multi-column-editor-bundle, file: 'vendor/heimrichhannot/contao-multi-column-editor-bundle/src/Resources/assets/js/contao-multi-column-editor-bundle.js' }
-    legacy:
-      js:
-        - sortablejs
-        - contao-multi-column-editor-bundle
