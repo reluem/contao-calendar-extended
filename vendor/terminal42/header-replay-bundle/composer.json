@@ -1,0 +1,35 @@
+{
+    "name": "terminal42/header-replay-bundle",
+    "description": "Send preflight requests for user context headers and replay them for reverse proxy support.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yanick Witschi",
+            "email": "yanick.witschi@terminal42.ch"
+        }
+    ],
+    "require": {
+        "php": "^5.6 | ^7.0",
+        "friendsofsymfony/http-cache-bundle": "^2.1",
+        "friendsofsymfony/http-cache": "^2.1",
+        "symfony/options-resolver": "^3.3 | ^4.0"
+    },
+    "require-dev": {
+        "php-http/guzzle6-adapter": "^1.1",
+        "phpunit/phpunit": "^5.7",
+        "friendsofphp/php-cs-fixer": "^2.1",
+        "php-coveralls/php-coveralls": "^2.1",
+        "leofeyer/optimize-native-functions-fixer": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Terminal42\\HeaderReplay\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Terminal42\\HeaderReplay\\Test\\": "tests"
+        }
+    }
+}
