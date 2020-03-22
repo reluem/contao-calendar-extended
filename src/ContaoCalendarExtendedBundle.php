@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * Contao CalendarExtended Bundle
+ * @copyright  Copyright (c) 2018-2020, reluem
+ * @author     reluem
+ * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
+ * @link       https://github.com/reluem/contao-calendar-extended
+ */
+
 namespace reluem\ContaoCalendarExtendedBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -9,5 +17,4 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class ContaoCalendarExtendedBundle extends Bundle
 {
-
 }
