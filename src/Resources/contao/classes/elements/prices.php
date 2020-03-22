@@ -7,29 +7,26 @@
      * @license LGPL-3.0+
      */
     
-    namespace Reluem;
+    
+    namespace reluem\Controller\ContentElement;
+    
+    use Contao\ContentModel;
+    use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
+    use Contao\CoreBundle\ServiceAnnotation\ContentElement;
+    use Contao\Template;
+    use Symfony\Component\HttpFoundation\Request;
+    use Symfony\Component\HttpFoundation\Response;
     
     /**
-     * Front end content element "ce_prices".
-     *
-     * @author Leo Feyer <https://github.com/leofeyer>
+     * @ContentElement(category="texts")
      */
-    class prices extends \ContentElement
+    class PricesController extends AbstractContentElementController
     {
-        /**
-         * Template
-         * @var string
-         */
-        protected $strTemplate = 'ce_prices';
-        
-        /**
-         * Compile the content element
-         */
-        protected function compile()
+        protected function getResponse(Template $template, ContentModel $model, Request $request): ?Response
         {
-            
             $prices = deserialize($this->prices);
-            $this->Template->prices = $prices;
+            $template->prices = $prices;
             
+            return $template->getResponse();
         }
     }
