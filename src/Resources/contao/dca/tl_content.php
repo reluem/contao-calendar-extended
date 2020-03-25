@@ -29,11 +29,12 @@
                             'eval' => [
                                 'rgxp' => 'date',
                                 'datepicker' => true,
-                                'tl_class' => 'wizard',
-                                'style' => 'width: 70%',
+                                'tl_class' => 'wizard ',
+                                'style' => 'width: 100px',
                             
                             ],
                         ],
+                    
                     'timetable_start' =>
                         [
                             'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_start'],
@@ -43,9 +44,9 @@
                             'eval' => [
                                 'rgxp' => 'time',
                                 'datepicker' => true,
-                                'submitOnChange' => true,
                                 'tl_class' => 'wizard',
-                                'style' => 'width: 70%',
+                                'style' => 'width: 100px',
+
                             ],
                         
                         ],
@@ -57,11 +58,9 @@
                             'eval' => [
                                 'rgxp' => 'time',
                                 'datepicker' => true,
-                                'submitOnChange' => true,
-                                'class' => 'wizard',
-                                'tl_class' => 'wizard',
-                                'style' => 'width: 70%',
-                            
+                                'tl_class' => 'wizard ',
+                                'style' => 'width: 100px',
+
                             ],
                         
                         ],
@@ -72,7 +71,7 @@
                             'inputType' => 'textarea',
                             'eval' => [
                                 'preserveTags' => true,
-                                'style' => 'width: 200px',
+                                'style' => 'width: 150px',
                             
                             
                             ],
@@ -84,13 +83,12 @@
                             'exclude' => true,
                             'inputType' => 'text',
                             'eval' => [
-                                'style' => 'width: 150px',
                             ],
                         ],
+                
                 ],
-        
-        
         ],
+        
         'sql' => 'blob NULL',
     ];
     
@@ -114,53 +112,42 @@
                             
                             ],
                         ],
-                    'price_items' =>
+                    
+                    'price' =>
                         [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price_items'],
+                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price'],
                             'exclude' => true,
-                            'inputType' => 'multiColumnWizard',
+                            'inputType' => 'text',
+                            'eval' => ['maxlength' => 10, 'rgxp' => 'digit'],
+                            'sql' => "int(10) unsigned NOT NULL default '0'",
+                        ],
+                    'price_desc' =>
+                        [
+                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price_desc'],
+                            'exclude' => true,
+                            'inputType' => 'text',
                             'eval' => [
-                                'columnFields' => [
-                                    
-                                    'price' =>
-                                        [
-                                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price'],
-                                            'exclude' => true,
-                                            'inputType' => 'text',
-                                            'eval' => ['maxlength' => 10, 'rgxp' => 'digit'],
-                                            'sql' => "int(10) unsigned NOT NULL default '0'",
-                                        ],
-                                    'price_desc' =>
-                                        [
-                                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price_desc'],
-                                            'exclude' => true,
-                                            'inputType' => 'text',
-                                            'eval' => [
-                                                'valign' => 'top',
-                                                'style' => 'width: 100px',
-                                            ],
-                                        ],
-                                    
-                                    'price_valid_until' =>
-                                        [
-                                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price_valid_until'],
-                                            'exclude' => true,
-                                            'inputType' => 'text',
-                                            'eval' => [
-                                                'rgxp' => 'datim',
-                                                'datepicker' => true,
-                                                'tl_class' => 'w50 wizard',
-                                                'style' => 'width: 70%',
-                                                'valign' => 'top',
-                                            
-                                            ],
-                                        
-                                        ],
-                                ],
+                                'valign' => 'top',
+                                'style' => 'width: 100px',
                             ],
+                        ],
+                    
+                    'price_valid_until' =>
+                        [
+                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price_valid_until'],
+                            'exclude' => true,
+                            'inputType' => 'text',
+                            'eval' => [
+                                'rgxp' => 'datim',
+                                'datepicker' => true,
+                                'tl_class' => 'w50 wizard',
+                                'style' => 'width: 70%',
+                                'valign' => 'top',
+                            
+                            ],
+                        
                         ],
                 ],
         ],
-        
         'sql' => 'blob NULL',
     ];

@@ -2,9 +2,9 @@
     
     
     /** Front end modules */
-    $GLOBALS['FE_MOD']['events']['navbarSignup'] = \Reluem\navbarSignup::class;
+    $GLOBALS['FE_MOD']['events']['navbarSignup'] = \reluem\ContaoCalendarExtendedBundle\FrontendModule\navbarSignup::class;
     
     /** CTE */
-    $GLOBALS['TL_CTE']['text']['timetable'] = \Reluem\timetable::class;
-    $GLOBALS['TL_CTE']['text']['prices'] = \Reluem\prices::class;
+    $GLOBALS['TL_CTE']['miscellaneous']['timetable'] = \reluem\ContaoCalendarExtendedBundle\ContentElement\timetable::class;
+    $GLOBALS['TL_CTE']['miscellaneous']['prices'] = \reluem\ContaoCalendarExtendedBundle\ContentElement\prices::class;
 

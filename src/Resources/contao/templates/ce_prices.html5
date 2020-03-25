@@ -1,20 +1,19 @@
 <?php $this->extend('block_unsearchable'); ?>
 
 <?php $this->block('content'); ?>
-
     <ul class="uk-list uk-list-large">
         <?php foreach ($this->prices as $category): ?>
 
             <li class="uk-margin-medium-bottom uk-margin-medium-top uk-padding-small">
                 
-                <?php if ($category['price_type']): ?>
+                <?php if ($category[0]['price_type']): ?>
                     <h3 class="uk-margin-remove-adjacent">
-                        <span class="uk-text-muted"><?= $category['price_type']; ?></span>
+                        <span class="uk-text-muted"><?= $category[0]['price_type']; ?></span>
                     </h3>
                 <?php endif; ?>
                 <div class="uk-grid uk-grid-match uk-child-width-expand@s" uk-grid>
                     <?php $active = null; ?>
-                    <?php foreach ($category['price_items'] as $price_item => $item): ?>
+                    <?php foreach ($category as $price => $item): ?>
                         <div>
                             <div class="uk-card uk-card-default uk-card-small uk-card-body">
                                 <h3 class="uk-h1 uk-margin-remove-adjacent"><?= $item['price'] ?>€</h3>
