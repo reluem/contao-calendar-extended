@@ -19,6 +19,7 @@
     
     $GLOBALS['TL_LANG']['tl_calendar_events']['subtitle'] [0] = 'Unterüberschrift';
     $GLOBALS['TL_LANG']['tl_calendar_events']['subtitle'] [1] = 'Eine zweite Überschrift für das Event';
+    
     $GLOBALS['TL_LANG']['tl_calendar_events']['video_legend'] = 'Video-Einstellungen';
     $GLOBALS['TL_LANG']['tl_calendar_events']['addVideo'] [0] = 'Video hinzufügen';
     $GLOBALS['TL_LANG']['tl_calendar_events']['addVideo'] [1] = 'Ein Video hinzufügen, dass als externer Link eingebunden wird.';
@@ -26,6 +27,7 @@
     $GLOBALS['TL_LANG']['tl_calendar_events']['videoUrl'] [1] = 'URL des Videos';
     
     $GLOBALS['TL_LANG']['tl_calendar_events']['signup_legend'] = 'Event-Anmeldung oder Bestellung';
+    $GLOBALS['TL_LANG']['tl_calendar_events']['addSignup'][0] = 'Event-Anmeldung hinzufügen';
     $GLOBALS['TL_LANG']['tl_calendar_events']['signupUrl'] [0] = 'Anmelde- oder Bestellformular';
     $GLOBALS['TL_LANG']['tl_calendar_events']['signupUrl'] [1] = 'URL oder interne Seite mit dem Formular';
     $GLOBALS['TL_LANG']['tl_calendar_events']['signupStart'] [0] = 'Beginn';
@@ -34,3 +36,8 @@
     $GLOBALS['TL_LANG']['tl_calendar_events']['signupEnd'] [1] = 'Letzter möglicher Anmeldeschluss';
     $GLOBALS['TL_LANG']['tl_calendar_events']['signupLabel'] [0] = 'Buttontext';
     $GLOBALS['TL_LANG']['tl_calendar_events']['signupLabel'] [1] = 'Text für den Button in der Menüleiste';
+    
+    $GLOBALS['TL_LANG']['tl_calendar_events']['addJSONLD'][0] = 'JSON-LD hinzufügen';
+    $GLOBALS['TL_LANG']['tl_calendar_events']['jsonLD'][0] = 'JSON-LD';
+    $GLOBALS['TL_LANG']['tl_calendar_events']['jsonLD'][1] = 'Geben Sie hier custom json-ld Markup ein. Das Markup wird an der richtigen Stelle eingefügt.';
+    
