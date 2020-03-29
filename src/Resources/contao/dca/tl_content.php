@@ -136,6 +136,7 @@
                                     'exclude' => true,
                                     'inputType' => 'text',
                                     'eval' => [
+                                        'preserveTags' => true,
                                         'tl_class' => 'w50',
                                     ],
                                 ],
