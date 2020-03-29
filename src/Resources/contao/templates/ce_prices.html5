@@ -23,7 +23,7 @@
                                     if ($item['price_valid_until']): ?>
                                         <?php //  if now <= price validity
                                         if (\Date::parse('U') <= $item['price_valid_until']): ?>
-                                            <div class="uk-label <?php echo (!$active | $active === $item['price_valid_until']) ? '' : 'uk-label-success'; ?>"
+                                            <div class="uk-label <?php echo (!$active | $active === $item['price_valid_until']) ? 'uk-label-success' : 'uk-label-primary'; ?>"
                                                  title="<?= \Date::parse('d.m.Y H:i',
                                                      $item['price_valid_until']); ?>">
                                                 bis <?= \Date::parse('d.m.Y',
