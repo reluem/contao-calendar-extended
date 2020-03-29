@@ -17,75 +17,79 @@
     $GLOBALS['TL_DCA']['tl_content']['fields']['timetable'] = [
         'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable'],
         'exclude' => true,
-        'inputType' => 'multiColumnWizard',
+        'inputType' => 'multiColumnEditor',
         'eval' => [
-            'columnFields' =>
+            
+            'multiColumnEditor' =>
                 [
-                    'timetable_date' =>
-                        [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_date'],
-                            'exclude' => true,
-                            'inputType' => 'text',
-                            'eval' => [
-                                'rgxp' => 'date',
-                                'datepicker' => true,
-                                'tl_class' => 'wizard ',
-                                'style' => 'width: 100px',
+                    'palettes' => [
+                        'default' => 'timetable_date, timetable_start, timetable_end, timetable_desc, timetable_loc',
+                    ],
+                    'sortable' => true,
+                    'fields' => [
+                        'timetable_date' =>
+                            [
+                                'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_date'],
+                                'exclude' => true,
+                                'inputType' => 'text',
+                                'eval' => [
+                                    'rgxp' => 'date',
+                                    'datepicker' => true,
+                                    'tl_class' => 'w50 wizard',
+                                
+                                ],
+                            ],
+                        
+                        'timetable_start' =>
+                            [
+                                'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_start'],
+                                'required' => true,
+                                'exclude' => true,
+                                'inputType' => 'text',
+                                'eval' => [
+                                    'rgxp' => 'time',
+                                    'datepicker' => true,
+                                    'tl_class' => 'w50 wizard',
+                                
+                                ],
                             
                             ],
-                        ],
+                        'timetable_end' =>
+                            [
+                                'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_end'],
+                                'exclude' => true,
+                                'inputType' => 'text',
+                                'eval' => [
+                                    'rgxp' => 'time',
+                                    'datepicker' => true,
+                                    'tl_class' => 'wizard w50 ',
+                                
+                                ],
+                            
+                            ],
+                        'timetable_desc' =>
+                            [
+                                'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_desc'],
+                                'exclude' => true,
+                                'inputType' => 'textarea',
+                                'eval' => [
+                                    'preserveTags' => true,
+                                    'groupStyle' => 'width:300px',
+                                
+                                ],
+                            
+                            ],
+                        'timetable_loc' =>
+                            [
+                                'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_loc'],
+                                'exclude' => true,
+                                'inputType' => 'text',
+                                'eval' => [
+                                    'tl_class' => 'w50 ',
+                                ],
+                            ],
                     
-                    'timetable_start' =>
-                        [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_start'],
-                            'required' => true,
-                            'exclude' => true,
-                            'inputType' => 'text',
-                            'eval' => [
-                                'rgxp' => 'time',
-                                'datepicker' => true,
-                                'tl_class' => 'wizard',
-                                'style' => 'width: 100px',
-
-                            ],
-                        
-                        ],
-                    'timetable_end' =>
-                        [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_end'],
-                            'exclude' => true,
-                            'inputType' => 'text',
-                            'eval' => [
-                                'rgxp' => 'time',
-                                'datepicker' => true,
-                                'tl_class' => 'wizard ',
-                                'style' => 'width: 100px',
-
-                            ],
-                        
-                        ],
-                    'timetable_desc' =>
-                        [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_desc'],
-                            'exclude' => true,
-                            'inputType' => 'textarea',
-                            'eval' => [
-                                'preserveTags' => true,
-                                'style' => 'width: 150px',
-                            
-                            
-                            ],
-                        
-                        ],
-                    'timetable_loc' =>
-                        [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['timetable_loc'],
-                            'exclude' => true,
-                            'inputType' => 'text',
-                            'eval' => [
-                            ],
-                        ],
-                
+                    ],
                 ],
         ],
         
@@ -96,55 +100,59 @@
     $GLOBALS['TL_DCA']['tl_content']['fields']['prices'] = [
         'label' => &$GLOBALS['TL_LANG']['tl_content']['prices'],
         'exclude' => true,
-        'inputType' => 'multiColumnWizard',
+        'inputType' => 'multiColumnEditor',
         'eval' => [
-            'columnFields' =>
+            
+            'multiColumnEditor' =>
                 [
-                    'price_type' =>
+                    'palettes' => [
+                        'default' => 'price_type, price, price_desc, price_valid_until',
+                    ],
+                    'sortable' => true,
+                    'fields' =>
                         [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price_type'],
-                            'exclude' => true,
-                            'inputType' => 'text',
-                            'eval' => [
-                                'tl_class' => 'w50',
-                                'style' => 'margin-top: 20px',
-                                'valign' => 'top',
+                            'price_type' =>
+                                [
+                                    'label' => &$GLOBALS['TL_LANG']['tl_content']['price_type'],
+                                    'exclude' => true,
+                                    'inputType' => 'text',
+                                    'eval' => [
+                                        'tl_class' => 'w50',
+                                    
+                                    ],
+                                ],
                             
-                            ],
-                        ],
-                    
-                    'price' =>
-                        [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price'],
-                            'exclude' => true,
-                            'inputType' => 'text',
-                            'eval' => ['maxlength' => 10, 'rgxp' => 'digit'],
-                            'sql' => "int(10) unsigned NOT NULL default '0'",
-                        ],
-                    'price_desc' =>
-                        [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price_desc'],
-                            'exclude' => true,
-                            'inputType' => 'text',
-                            'eval' => [
-                                'valign' => 'top',
-                                'style' => 'width: 100px',
-                            ],
-                        ],
-                    
-                    'price_valid_until' =>
-                        [
-                            'label' => &$GLOBALS['TL_LANG']['tl_content']['price_valid_until'],
-                            'exclude' => true,
-                            'inputType' => 'text',
-                            'eval' => [
-                                'rgxp' => 'datim',
-                                'datepicker' => true,
-                                'tl_class' => 'w50 wizard',
-                                'style' => 'width: 70%',
-                                'valign' => 'top',
+                            'price' =>
+                                [
+                                    'label' => &$GLOBALS['TL_LANG']['tl_content']['price'],
+                                    'exclude' => true,
+                                    'inputType' => 'text',
+                                    'eval' => ['maxlength' => 10, 'rgxp' => 'digit'],
+                                    'sql' => "int(10) unsigned NOT NULL default '0'",
+                                ],
+                            'price_desc' =>
+                                [
+                                    'label' => &$GLOBALS['TL_LANG']['tl_content']['price_desc'],
+                                    'exclude' => true,
+                                    'inputType' => 'text',
+                                    'eval' => [
+                                        'tl_class' => 'w50',
+                                    ],
+                                ],
                             
-                            ],
+                            'price_valid_until' =>
+                                [
+                                    'label' => &$GLOBALS['TL_LANG']['tl_content']['price_valid_until'],
+                                    'exclude' => true,
+                                    'inputType' => 'text',
+                                    'eval' => [
+                                        'rgxp' => 'datim',
+                                        'datepicker' => true,
+                                        'tl_class' => 'w50 wizard',
+                                    
+                                    ],
+                                
+                                ],
                         
                         ],
                 ],
