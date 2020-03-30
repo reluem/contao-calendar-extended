@@ -1,17 +1,17 @@
 <?php
-
-/*
- * Contao CalendarExtended Bundle
- * @copyright  Copyright (c) 2018-2020, reluem
- * @author     reluem
- * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
- * @link       https://github.com/reluem/contao-calendar-extended
- */
-
-namespace reluem\ContaoCalendarExtendedBundle\ContentElement;
-
+    
+    /*
+     * Contao CalendarExtended Bundle
+     * @copyright  Copyright (c) 2018-2020, reluem
+     * @author     reluem
+     * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
+     * @link       https://github.com/reluem/contao-calendar-extended
+     */
+    
+    namespace reluem\ContaoCalendarExtendedBundle\ContentElement;
+    
     use Contao\ContentElement;
-
+    
     /**
      * Front end content element "ce_timetable".
      *
@@ -25,21 +25,23 @@ namespace reluem\ContaoCalendarExtendedBundle\ContentElement;
          * @var string
          */
         protected $strTemplate = 'ce_timetable';
-
+        
         /**
          * Compile the content element.
          */
         protected function compile()
         {
-            $arr = deserialize($this->timetable);
-            $timetable = [];
-
-            foreach ($arr as $element) {
-                $timetable[$element['timetable_date']][] = $element;
+            if ($this->timetable) {
+                $arr = deserialize($this->timetable);
+                $timetable = [];
+                
+                foreach ($arr as $element) {
+                    $timetable[$element['timetable_date']][] = $element;
+                }
+                
+                ksort($timetable, SORT_NUMERIC);
+                
+                $this->Template->timetable = $timetable;
             }
-
-            ksort($timetable, SORT_NUMERIC);
-
-            $this->Template->timetable = $timetable;
         }
     }

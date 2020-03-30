@@ -26,6 +26,7 @@
                         'default' => 'timetable_date, timetable_start, timetable_end, timetable_desc, timetable_loc',
                     ],
                     'sortable' => true,
+                    'minRowCount' => 0,
                     'fields' => [
                         'timetable_date' =>
                             [
@@ -109,6 +110,7 @@
                         'default' => 'price_type, price, price_desc, price_valid_until',
                     ],
                     'sortable' => true,
+                    'minRowCount' => 0,
                     'fields' =>
                         [
                             'price_type' =>

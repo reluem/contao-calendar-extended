@@ -1,6 +1,7 @@
 <?php $this->extend('block_unsearchable'); ?>
 
 <?php $this->block('content'); ?>
+<?php if ($this->prices): ?>
     <ul class="uk-list uk-list-large">
         <?php foreach ($this->prices as $category): ?>
 
