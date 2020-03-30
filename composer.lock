@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9e303aac6c24f8c71d9e3ab1fc60dc4",
+    "content-hash": "b866da7d3e000ccebdd5ee30cfd69cca",
     "packages": [
         {
             "name": "ausi/slug-generator",
@@ -329,266 +329,6 @@
             "description": "Composer plugin that provides installers for contao-module and legacy-contao-module.",
             "homepage": "http://c-c-a.org/",
             "time": "2018-07-22T21:42:30+00:00"
-        },
-        {
-            "name": "contao-community-alliance/dependency-container",
-            "version": "2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/contao-community-alliance/dependency-container.git",
-                "reference": "61f341da1af8135c779727e798b00d7e18d3e878"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/contao-community-alliance/dependency-container/zipball/61f341da1af8135c779727e798b00d7e18d3e878",
-                "reference": "61f341da1af8135c779727e798b00d7e18d3e878",
-                "shasum": ""
-            },
-            "require": {
-                "contao/core-bundle": "^4.4",
-                "php": "^5.6 || ^7.0",
-                "pimple/pimple": "^1.0",
-                "symfony/config": "^3.0 || ^4.0",
-                "symfony/dependency-injection": "^3.0 || ^4.0",
-                "symfony/http-kernel": "^3.0 || ^4.0",
-                "symfony/yaml": "^3.0 || ^4.0"
-            },
-            "require-dev": {
-                "contao/manager-bundle": "^4.4",
-                "phpcq/all-tasks": "^1.2"
-            },
-            "type": "contao-bundle",
-            "extra": {
-                "contao-manager-plugin": "DependencyInjection\\Container\\ContaoManager\\Plugin",
-                "branch-alias": {
-                    "master": "2.0.x-dev",
-                    "dev-develop": "2.1.x-dev",
-                    "dev-support/1.8.x": "1.8.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "DependencyInjection\\Container\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Schiffler",
-                    "email": "c.schiffler@cyberspectrum.de",
-                    "homepage": "http://www.cyberspectrum.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Stefan Heimes",
-                    "email": "stefan_heimes@hotmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Dependency container based on pimple for Contao open source cms.",
-            "homepage": "http://c-c-a.org/",
-            "keywords": [
-                "container",
-                "contao",
-                "dependency",
-                "di",
-                "injection"
-            ],
-            "time": "2018-12-21T22:32:33+00:00"
-        },
-        {
-            "name": "contao-community-alliance/event-dispatcher",
-            "version": "2.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/contao-community-alliance/event-dispatcher.git",
-                "reference": "e0ea403e4b9508493a32b8db581bf41fa8dec0fd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/contao-community-alliance/event-dispatcher/zipball/e0ea403e4b9508493a32b8db581bf41fa8dec0fd",
-                "reference": "e0ea403e4b9508493a32b8db581bf41fa8dec0fd",
-                "shasum": ""
-            },
-            "require": {
-                "contao-community-alliance/dependency-container": "^2.0",
-                "contao/core-bundle": "^4.4",
-                "php": "^5.6 || ^7.0",
-                "symfony/event-dispatcher": "^3.0 || ^4.0",
-                "symfony/http-kernel": "^3.0 || ^4.0"
-            },
-            "require-dev": {
-                "contao/manager-bundle": "^4.4",
-                "phpcq/all-tasks": "^1.2"
-            },
-            "type": "contao-bundle",
-            "extra": {
-                "contao-manager-plugin": "ContaoCommunityAlliance\\Contao\\EventDispatcher\\ContaoManager\\Plugin",
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev",
-                    "dev-develop": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ContaoCommunityAlliance\\Contao\\EventDispatcher\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Schiffler",
-                    "email": "c.schiffler@cyberspectrum.de",
-                    "homepage": "http://www.cyberspectrum.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Stefan Heimes",
-                    "email": "stefan_heimes@hotmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Event dispatcher service for Contao Open Source CMS",
-            "homepage": "http://c-c-a.org/",
-            "keywords": [
-                "contao",
-                "event"
-            ],
-            "time": "2018-12-21T22:56:38+00:00"
-        },
-        {
-            "name": "contao-community-alliance/events-contao-bindings",
-            "version": "4.4.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/contao-community-alliance/events-contao-bindings.git",
-                "reference": "f47fd417301d86b0fd739ddc9cc3a789edde57c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/contao-community-alliance/events-contao-bindings/zipball/f47fd417301d86b0fd739ddc9cc3a789edde57c9",
-                "reference": "f47fd417301d86b0fd739ddc9cc3a789edde57c9",
-                "shasum": ""
-            },
-            "require": {
-                "contao-community-alliance/event-dispatcher": "^2.0",
-                "contao/core-bundle": "^4.4",
-                "php": "^5.6 || ^7.0",
-                "symfony/event-dispatcher": "^3.0 || ^4.0"
-            },
-            "require-dev": {
-                "contao/manager-plugin": "^2.2",
-                "php-http/guzzle6-adapter": "^1.1",
-                "phpcq/all-tasks": "^1.2",
-                "phpunit/phpunit": "^4.8 || ^6.0"
-            },
-            "type": "contao-bundle",
-            "extra": {
-                "contao-manager-plugin": "ContaoCommunityAlliance\\Contao\\Bindings\\ContaoManager\\Plugin",
-                "branch-alias": {
-                    "dev-master": "4.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ContaoCommunityAlliance\\Contao\\Bindings\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Schiffler",
-                    "email": "c.schiffler@cyberspectrum.de",
-                    "homepage": "http://www.cyberspectrum.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Stefan Heimes",
-                    "email": "stefan_heimes@hotmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "This library turns the Contao Core API into events.",
-            "homepage": "http://c-c-a.org/",
-            "keywords": [
-                "bindings",
-                "bundle",
-                "contao",
-                "events"
-            ],
-            "time": "2019-08-27T21:35:07+00:00"
-        },
-        {
-            "name": "contao-community-alliance/translator",
-            "version": "2.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/contao-community-alliance/translator.git",
-                "reference": "e27906e783b7b361c8fb277679d5d182fab4c734"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/contao-community-alliance/translator/zipball/e27906e783b7b361c8fb277679d5d182fab4c734",
-                "reference": "e27906e783b7b361c8fb277679d5d182fab4c734",
-                "shasum": ""
-            },
-            "require": {
-                "contao-community-alliance/events-contao-bindings": "^4.4",
-                "contao/core-bundle": "^4.4",
-                "php": "^5.6 || ^7.0",
-                "symfony/event-dispatcher": "^3.0 || ^4.0"
-            },
-            "require-dev": {
-                "contao/manager-bundle": "^4.4",
-                "phpcq/all-tasks": "^1.2"
-            },
-            "type": "contao-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev",
-                    "dev-support/2.0.x": "2.0.x-dev",
-                    "dev-develop": "2.2.x-dev"
-                },
-                "contao-manager-plugin": "ContaoCommunityAlliance\\Translator\\ContaoManager\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "ContaoCommunityAlliance\\Translator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Schiffler",
-                    "email": "c.schiffler@cyberspectrum.de",
-                    "homepage": "http://www.cyberspectrum.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Stefan Heimes",
-                    "email": "stefan_heimes@hotmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Multipurpose translation manager and interface",
-            "homepage": "http://c-c-a.org/",
-            "keywords": [
-                "contao",
-                "translation"
-            ],
-            "time": "2019-08-20T11:41:03+00:00"
         },
         {
             "name": "contao-components/ace",
@@ -3088,16 +2828,16 @@
         },
         {
             "name": "heimrichhannot/contao-multi-column-editor-bundle",
-            "version": "2.4.1",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heimrichhannot/contao-multi-column-editor-bundle.git",
-                "reference": "a3e7985be35c3c4bb2053966c811653e1e25c176"
+                "reference": "74d4c812e442be12c4ebb75f1ed33bba95f778c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heimrichhannot/contao-multi-column-editor-bundle/zipball/a3e7985be35c3c4bb2053966c811653e1e25c176",
-                "reference": "a3e7985be35c3c4bb2053966c811653e1e25c176",
+                "url": "https://api.github.com/repos/heimrichhannot/contao-multi-column-editor-bundle/zipball/74d4c812e442be12c4ebb75f1ed33bba95f778c2",
+                "reference": "74d4c812e442be12c4ebb75f1ed33bba95f778c2",
                 "shasum": ""
             },
             "require": {
@@ -3164,7 +2904,7 @@
                 "multi",
                 "wizard"
             ],
-            "time": "2020-03-17T11:26:21+00:00"
+            "time": "2020-03-30T08:19:17+00:00"
         },
         {
             "name": "heimrichhannot/contao-request-bundle",
@@ -4087,106 +3827,6 @@
                 "relative"
             ],
             "time": "2019-02-05T23:41:09+00:00"
-        },
-        {
-            "name": "menatwork/contao-multicolumnwizard-bundle",
-            "version": "3.4.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/menatwork/contao-multicolumnwizard-bundle.git",
-                "reference": "2815a024a39fecf6dfd1ed307eaa0957d0b1fa3f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/menatwork/contao-multicolumnwizard-bundle/zipball/2815a024a39fecf6dfd1ed307eaa0957d0b1fa3f",
-                "reference": "2815a024a39fecf6dfd1ed307eaa0957d0b1fa3f",
-                "shasum": ""
-            },
-            "require": {
-                "contao-community-alliance/translator": "^2.1",
-                "contao/core-bundle": "^4.4.8",
-                "php": "^5.6 || ^7.0"
-            },
-            "replace": {
-                "contao-legacy/multicolumnwizard": "*",
-                "menatwork/contao-multicolumnwizard": "self.version"
-            },
-            "require-dev": {
-                "contao/manager-bundle": "~4.4",
-                "phpcq/all-tasks": "~1.2"
-            },
-            "type": "contao-bundle",
-            "extra": {
-                "contao-manager-plugin": "MenAtWork\\MultiColumnWizardBundle\\ContaoManager\\Plugin",
-                "branch-alias": {
-                    "dev-master": "3.4.x-dev",
-                    "dev-develop": "3.5.x-dev",
-                    "dev-support/contao3": "3.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "MenAtWork\\MultiColumnWizardBundle\\": "src",
-                    "MenAtWork\\MultiColumnWizard\\": "legacy_layer/psr-4-maw",
-                    "MultiColumnWizard\\": "legacy_layer/psr-4-mcw"
-                },
-                "classmap": [
-                    "legacy_layer/classmap"
-                ],
-                "files": [
-                    "src/deprecated-autoload.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Stefan Heimes",
-                    "email": "stefan_heimes@hotmail.com",
-                    "homepage": "http://www.men-at-work.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andreas Isaak",
-                    "email": "contao@men-at-work.de",
-                    "homepage": "http://www.men-at-work.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "David Maack",
-                    "email": "contao@men-at-work.de",
-                    "homepage": "http://www.men-at-work.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andreas Schempp",
-                    "email": "andreas.schempp@terminal42.ch",
-                    "homepage": "http://www.terminal42.ch",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Yanick Witschi",
-                    "email": "yanick.witschi@terminal42.ch",
-                    "homepage": "http://www.terminal42.ch",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Tristan Lins",
-                    "email": "tristan.lins@bit3.de",
-                    "homepage": "http://bit3.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "MultiColumWizard for Contao OpenSource CMS",
-            "homepage": "http://www.men-at-work.de",
-            "keywords": [
-                "contao",
-                "widget",
-                "wizard"
-            ],
-            "time": "2020-03-08T16:15:56+00:00"
         },
         {
             "name": "michelf/php-markdown",
@@ -5218,52 +4858,6 @@
                 "tokenizer"
             ],
             "time": "2017-11-27T05:48:46+00:00"
-        },
-        {
-            "name": "pimple/pimple",
-            "version": "v1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "2019c145fe393923f3441b23f29bbdfaa5c58c4d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/2019c145fe393923f3441b23f29bbdfaa5c58c4d",
-                "reference": "2019c145fe393923f3441b23f29bbdfaa5c58c4d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Pimple": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Pimple is a simple Dependency Injection Container for PHP 5.3",
-            "homepage": "http://pimple.sensiolabs.org",
-            "keywords": [
-                "container",
-                "dependency injection"
-            ],
-            "time": "2013-11-22T08:30:29+00:00"
         },
         {
             "name": "psr/cache",
@@ -12321,7 +11915,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.38",
+            "version": "v3.4.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
@@ -12528,7 +12122,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"

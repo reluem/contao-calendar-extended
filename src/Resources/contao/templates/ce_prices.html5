@@ -4,7 +4,7 @@
     <ul class="uk-list uk-list-large">
         <?php foreach ($this->prices as $category): ?>
 
-            <li class="uk-margin-medium-bottom uk-margin-medium-top uk-padding-small">
+            <li class="uk-margin-medium uk-padding-small">
                 
                 <?php if ($category[0]['price_type']): ?>
                     <h3 class="uk-margin-remove-adjacent">
@@ -22,16 +22,16 @@
                                 <?php // if price validity given
                                     if ($item['price_valid_until']): ?>
                                         <?php //  if now <= price validity
-                                        if (\Date::parse('U') <= $item['price_valid_until']): ?>
+                                        if ($this->parseDate('U') <= $item['price_valid_until']): ?>
                                             <div class="uk-label <?php echo (!$active | $active === $item['price_valid_until']) ? 'uk-label-success' : 'uk-label-primary'; ?>"
-                                                 title="<?= \Date::parse('d.m.Y H:i',
+                                                 title="<?= $this->parseDate('d.m.Y H:i',
                                                      $item['price_valid_until']); ?>">
-                                                bis <?= \Date::parse('d.m.Y',
+                                                bis <?= $this->parseDate('d.m.Y',
                                                     $item['price_valid_until']); ?></div>
                                             <?php $active = $item['price_valid_until']; ?>
                                         <?php else: ?>
                                             <div class="uk-label uk-label-warning"
-                                                 title="<?= \Date::parse('d.m.Y H:i',
+                                                 title="<?= $this->parseDate('d.m.Y H:i',
                                                      $item['price_valid_until']); ?>">abgelaufen
                                             </div>
                                         <?php endif; ?>

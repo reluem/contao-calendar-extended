@@ -48,7 +48,7 @@
         'Beschreibung',
     ];
     $GLOBALS['TL_LANG']['tl_content']['price_type'] = [
-        'Altersstufe',
+        'Kategorie',
     ];
     $GLOBALS['TL_LANG']['tl_content']['price_valid_from'] = [
         'gültig von',
