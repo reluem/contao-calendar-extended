@@ -22,16 +22,12 @@
     PaletteManipulator::create()
         ->addLegend('video_legend', 'image_legend')
         ->addField('addVideo', 'video_legend', PaletteManipulator::POSITION_APPEND)
-        ->addLegend('text_legend', 'image_legend',
-            PaletteManipulator::POSITION_BEFORE)
-        ->addField('text', 'text_legend', PaletteManipulator::POSITION_APPEND)
         ->addLegend('signup_legend', 'recurring_legend')
         ->addField('addSignup', 'signup_legend', PaletteManipulator::POSITION_APPEND)
         ->addField('addJSONLD', 'meta_legend',
             PaletteManipulator::POSITION_APPEND)
         ->addField(['coordinates', 'FB_event_URL'],
             'location')
-        ->addField('subtitle', 'title')
         ->applyToPalette('default', 'tl_calendar_events');
     
     /**
@@ -76,24 +72,7 @@
         'eval' => ['maxlength' => 255, 'tl_class' => 'w50'],
         'sql' => "varchar(255) NOT NULL default ''",
     ];
-    $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['subtitle'] = [
-        'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['subtitle'],
-        'exclude' => true,
-        'search' => true,
-        'sorting' => true,
-        'flag' => 1,
-        'inputType' => 'text',
-        'eval' => ['maxlength' => 255, 'tl_class' => 'clr w50'],
-        'sql' => "varchar(255) NOT NULL default ''",
-    ];
-    $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['text'] = [
-        'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['text'],
-        'exclude' => true,
-        'search' => true,
-        'inputType' => 'textarea',
-        'eval' => ['rte' => 'tinyMCE', 'tl_class' => 'clr'],
-        'sql' => "text NULL",
-    ];
+    
     
     $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['addVideo'] = [
         'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['addVideo'],

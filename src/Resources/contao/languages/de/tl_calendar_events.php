@@ -13,12 +13,6 @@
     $GLOBALS['TL_LANG']['tl_calendar_events']['teaser_legend'] = 'Teaser des Events';
     $GLOBALS['TL_LANG']['tl_calendar_events']['location_legend'] = 'Details zum Ort';
     
-    $GLOBALS['TL_LANG']['tl_calendar_events']['text'] [0] = 'Text des Events';
-    $GLOBALS['TL_LANG']['tl_calendar_events']['text'] [1] = 'Dieser Text überschreibt den Teaser auf den Event-Seiten.';
-    
-    
-    $GLOBALS['TL_LANG']['tl_calendar_events']['subtitle'] [0] = 'Unterüberschrift';
-    $GLOBALS['TL_LANG']['tl_calendar_events']['subtitle'] [1] = 'Eine zweite Überschrift für das Event';
     
     $GLOBALS['TL_LANG']['tl_calendar_events']['video_legend'] = 'Video-Einstellungen';
     $GLOBALS['TL_LANG']['tl_calendar_events']['addVideo'] [0] = 'Video hinzufügen';
