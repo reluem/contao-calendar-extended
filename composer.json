@@ -13,8 +13,7 @@
     "php": "^7.0",
     "contao/core-bundle": "^4.10",
     "netzmacht/contao-leaflet-geocode-widget": "^1.3.0",
-    "heimrichhannot/contao-multi-column-editor-bundle": "^2.4",
-    "fiedsch/contao-jsonwidget": "^0.3.0"
+    "heimrichhannot/contao-multi-column-editor-bundle": "^2.4"
   },
   "conflict": {
     "contao/core": "*",
@@ -43,4 +42,3 @@
     "contao-manager-plugin": "reluem\\ContaoCalendarExtendedBundle\\ContaoManager\\Plugin"
   }
 }
-

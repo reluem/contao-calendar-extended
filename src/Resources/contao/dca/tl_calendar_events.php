@@ -45,7 +45,7 @@
     
     $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['jsonLD'] = [
         'label' => &$GLOBALS['TL_LANG']['tl_calendar_events']['jsonLD'],
-        'inputType' => 'jsonWidget',
+        'inputType' => 'text',
         'eval' => [
             'tl_style' => 'long',
             'decodeEntities' => true,
@@ -62,7 +62,7 @@
         'eval' => [
             'tl_class' => 'w50',
         ],
-        'sql' => 'varchar(255) NOT NULL default \'\'',
+        'sql' => 'varchar(255) NOT NULL default',
     ];
     
     $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['FB_event_URL'] = [
