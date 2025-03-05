@@ -7,7 +7,7 @@
     {
       "name": "Lucas Rech",
       "email": "reluem@icloud.com"
-    }
+    } 
   ],
   "require": {
     "php": "^7.0 || ^8.0",
